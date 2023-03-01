@@ -1,0 +1,86 @@
+<html> 
+    <head>
+        <title>
+            Регистрация на сайте
+        </title>
+        <style>
+            .red {
+              color: red;
+            }
+        </style>
+          
+    </head>
+    
+    <body>
+        <h2 align="center" class="red">Форма Регистрация</h2>
+        <form method="post" action="maito:??????">
+            <div align = "center">
+                <table>
+                    <tr >
+                        <td align="right"> Имя</td>
+                        <td> <input type="text" name="name" maxlength=25 size=20 value=""></td>
+                    </tr>
+                    <tr>
+                        <td align="right">e-mail</td>
+                        <td><input type="text" name="email" maxlength=25 size=20 value=""></td>
+                    </tr>
+                    <tr>
+                        <td align="right"> Пароль</td>
+                        <td><input type="password" name="pass" maxlength=25 size=20 value=""></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Повтор пароля</td>
+                        <td><input type="password" name="passPov" maxlength=25 size=20 value=""></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Пол</td>
+                        <td>
+                            <input type = "radio" name = "choiceradio" value = "1">мужской
+                            <input type = "radio" name = "choiceradio" value = "2">женский
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Увлечения</td>
+                        <td>
+                            <select multiple>
+                                <option>Компьютеры</option>
+                                <option>Спорт</option>
+                                <option>Игры</option>
+                                <option>Животные</option>
+                                <option>Плавание</option>
+                                <option>Конструктор</option>
+                                <option>Бег</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Ваши пожалания</td>
+                        <td> 
+                            <textarea name = "message" rows="2" cols="20">
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">С условиями регистрации<br>
+                            ознакомлен</td>
+                        <td> 
+                            <input type = "checkbox" name = "terms" value = "yes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <a href="Rigistr.html"> 
+                                <button type = "button"  value = "Отправить" >
+                                    Отправить
+                                </button></a>
+                            <button type = "reset" >
+                                Очистить
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>
