@@ -1,0 +1,24 @@
+p {
+    font-family: Arial;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 30px;
+}
+p {
+    text-indent: 30px;
+    }
+h1 {
+    font-family: Verdana;
+    font-size: 20px;
+    font-weight: normal;
+    }
+p:nth-of-type(2) {
+    text-indent: 0;
+    }
+table {
+    vertical-align: top;
+    }
+th {
+    vertical-align: middle;
+    }
