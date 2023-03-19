@@ -1,0 +1,22 @@
+h1{
+    text-indent: 80px;
+    color:blue;
+    text-align: left;
+}
+h3{
+    text-indent: 80px;
+    color:blue;
+    text-align: left;
+}
+p{
+    text-indent: 20px;
+    width: 350px;
+}
+.red-text{
+    color:red;
+    font-weight: bold;
+}
+.cursiv-text{
+    color:blue;
+    font-style: italic;
+}

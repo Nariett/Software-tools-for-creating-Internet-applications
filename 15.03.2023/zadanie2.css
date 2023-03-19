@@ -1,0 +1,24 @@
+ol{
+    color:red;
+}
+ul{
+    color:brown;
+    font-style: italic;
+}
+li{
+    width:500px;
+}
+h2{
+    color:green;
+}
+p{
+    width: 600px;
+}
+.bond-text{
+    color:red;
+    font-weight: bold;
+}
+.blue-text{
+    color:blue;
+    font-style: italic;
+}

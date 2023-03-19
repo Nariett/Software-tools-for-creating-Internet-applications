@@ -1,0 +1,17 @@
+h1{
+    color:green;
+    line-height: 1px;
+}
+h2{
+    color:rgb(27, 80, 27);
+    line-height: 1px;
+}
+p{
+    width:400px;
+}
+.cursiv-text{
+    font-style: italic;
+}
+a{
+    color:blue;
+}
