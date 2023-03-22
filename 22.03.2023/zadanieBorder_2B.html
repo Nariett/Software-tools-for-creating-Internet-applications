@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .parallelogram {
+                background: #ffffff;
+                width: 120px;
+                height: 50px;
+                border: 5px solid black;
+                transform: skew(-20deg);
+            }
+        .WhiteText{
+            color: white;
+            text-align: center;
+        }
+        .rectangle{
+        background: #ffffff;
+        border: 5px solid black;
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 120px;
+        height: 30px;}
+        #trapezoid {
+        border-bottom: 50px solid rgb(0, 0, 0);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        height: 0;
+        width: 100px;
+        }
+        #trapezoidDowm {
+        border-top: 50px solid rgb(0, 0, 0);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        height: 0;
+        width: 100px;
+        color:white;
+        }
+        
+    </style>
+    <title>Задание 2(B)</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <div  style="border-radius: 50px 50px 50px 50px;" class="rectangle">Запуск</div>
+            </td>
+            <td><p></p></td>
+            <td><p></p></td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="стрелка.png" height="50px" width="50px" style="transform: rotate(90deg)"  >
+            </td>
+            <td><p></p></td>
+            <td><p></p></td>
+        </tr>
+        <tr align = "center" >
+            <td>
+                <div class="rectangle">a = 1</div>
+            </td>
+            <td>
+                <img src="стрелка.png" height="50px" width="50px">
+            </td>
+            <td><div id='trapezoid'><span class ="WhiteText">Цикл i от 1 до n</span></div></td>
+        </tr>
+        <tr align = "center">
+            <td></td>
+            <td></td>
+            <td>
+                <img src="стрелка.png" height="50px" width="50px" style="transform: rotate(90deg)"  >
+            </td>
+        </tr>
+        <tr align = "center">
+            <td></td>
+            <td></td>
+            <td>
+                <div class="rectangle">a = a * i</div>
+            </td>
+        </tr>
+        <tr align = "center">
+            <td></td>
+            <td></td>
+            <td>
+                <img src="стрелка.png" height="50px" width="50px" style="transform: rotate(90deg)"  >
+            </td>
+        </tr>
+        <tr align = "center">
+            <td><div class="parallelogram" align = "center">Вывести а</div></td>
+            <td><img src="стрелка.png" height="50px" width="50px" style="transform: rotate(180deg)"></td>
+            <td>
+                <div id='trapezoidDowm'><span class ="WhiteText">Увеличить i на 1 Цикл i </span></div>
+            </td>
+        </tr>
+        <tr align = "center">
+            <td><img src="стрелка.png" height="50px" width="50px" style="transform: rotate(90deg)"></td>
+        </tr>
+        <tr>
+            <td><div  style="border-radius: 50px 50px 50px 50px;" class="rectangle">Остановить</div></td>
+        </tr>
+    </table>
+</body>
+</html>
