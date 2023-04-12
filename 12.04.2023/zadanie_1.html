@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Задание</title>
+    <style>
+        .div_size{
+            background: rgb(78, 78, 78); 
+            height: 200px;
+            width: 500px;
+        }
+        @keyframes example{
+            0% { margin-left:0px;}
+            50% {margin-left: 150px;}
+            100% {margin-left:0px;}
+        }
+        .div_ItemBlue{
+            margin-top: 50px;
+            float:left;
+            height: 100px;
+            width: 100px;
+            background: blue;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-iteration-count: 3;
+        }
+        @keyframes exampleTwo{
+            0% { margin-left:300px;}
+            50% { margin-left: 0px;}
+            100% {margin-left:300px;}   
+        }
+        .div_ItemRed{
+            margin-top: 50px;
+            float:left;
+            margin-left: 300px;
+            height: 100px;
+            width: 100px;
+            background: red;
+            animation-name: exampleTwo;
+            animation-duration: 6s;
+            animation-iteration-count: 3; 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h2 >Самойлов Александр Сергеевич</h2>
+    <h4>Два объекта разных цветов движутся по области 200 на 500
+        пикселей в противоположном направлении, при встрече идут обратно в начальную
+        точку. время движения 6 сек. Количество повторов минимально 3раза</h4>
+    <div class="div_size">
+        <div class="div_ItemBlue"></div>
+        <div class="div_ItemRed"></div>
+    </div>
+</body>
+</html>

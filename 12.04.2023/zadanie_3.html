@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Задание 3</title>
+    <style>
+        .div_size{
+            background: rgb(78, 78, 78); 
+            height: 700px;
+            width: 700px;
+        }
+        @keyframes example{
+            0%  {margin-left:0px;margin-top: 0px;}
+            
+            20% {margin-left:100px;margin-top:600px;}
+            40% {margin-left:200px;margin-top:400px}
+            60% {margin-left:300px;margin-top:600px}
+            80% {margin-left:400px;margin-top:500px}
+            90% {margin-left:500px;margin-top:600px;}
+            100% {margin-left:600px;margin-top:600px;}
+        }
+        .div_ItemBlue{
+            border-radius: 100%;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background: blue;
+            animation-name: example;
+            animation-duration: 8s;
+            animation-iteration-count: 1;
+        }
+        p{
+            text-align: center;
+            margin-top: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 >Самойлов Александр Сергеевич</h2>
+    <h4>Два объекта разных меняющихся цветов движутся по области 700 на
+        700 пикселей в противоположном направлении, проходя через каждый угол, при
+        встрече меняются. время движения 12 сек. Количество повторов минимально 3раза</h4>
+    <div class="div_size">
+        <div class="div_ItemBlue"><p>1</p></div>
+    </div>
+</body>
+</html>
