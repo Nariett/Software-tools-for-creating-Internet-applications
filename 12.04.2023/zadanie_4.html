@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Задание 4</title>
+    <style>
+        .div_size{
+            background: rgb(78, 78, 78); 
+            height: 700px;
+            width: 700px;
+        }
+        @keyframes exampleBlue{
+            0%  {margin-left:300px;margin-top: 300px;}
+            10% {margin-left:290px;margin-top:350px;}
+            20% {margin-left:300px;margin-top:400px}
+            30% {margin-left:350px;margin-top:410px}
+            40% {margin-left:400px;margin-top:400px}
+            50% {margin-left:410px;margin-top:350px}
+            60% {margin-left:400px;margin-top:300px;}
+            70% {margin-left:350px;margin-top:290px;}
+            100% {margin-left:300px;margin-top:300px;}
+
+        }
+        @keyframes exampleYellow{
+            0%  {margin-left:400px;margin-top: 300px;}
+            10% {margin-left:350px;margin-top:290px}
+            20% {margin-left:300px;margin-top:300px}
+            30% {margin-left:290px;margin-top:350px;}
+            40% {margin-left:300px;margin-top:400px}
+            50% {margin-left:350px;margin-top:410px}
+            60% {margin-left:400px;margin-top:400px}
+            70% {margin-left:410px;margin-top:350px}
+            100% {margin-left:400px;margin-top:300px;}
+        }
+        @keyframes exampleGreen{
+            0% {margin-left:300px;margin-top:400px}
+            10% {margin-left:350px;margin-top:410px}
+            20% {margin-left:400px;margin-top:400px}
+            30% {margin-left:410px;margin-top:350px}
+            40% {margin-left:400px;margin-top:300px;}
+            50% {margin-left:350px;margin-top:290px;}
+            60% {margin-left:300px;margin-top:300px;}
+            70% {margin-left:290px;margin-top:350px;}
+            100% {margin-left:300px;margin-top:400px}
+        }
+        @keyframes exampleRed{
+            0% {margin-left:400px;margin-top:400px}
+            10% {margin-left:410px;margin-top:350px}
+            20% {margin-left:400px;margin-top:300px;}
+            30% {margin-left:350px;margin-top:290px;}
+            40% {margin-left:300px;margin-top:300px;}
+            50% {margin-left:290px;margin-top:350px;}
+            60% {margin-left:300px;margin-top:400px;}
+            70% {margin-left:350px;margin-top:410px;}
+            100% {margin-left:400px;margin-top:400px}
+
+
+        }
+        .div_ItemBlue{
+            border-radius: 100%;
+            margin-top: 300px;
+            margin-left:300px;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: blue;
+            animation-name: exampleBlue;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .div_ItemYellow{
+            border-radius: 100%;
+            margin-top: 300px;
+            margin-left:400px;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: yellow;
+            animation-name: exampleYellow;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .div_ItemGreen{
+            border-radius: 100%;
+            margin-top: 400px;
+            margin-left:300px;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: green;
+            animation-name: exampleGreen;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        .div_ItemRed{
+            border-radius: 100%;
+            margin-top: 400px;
+            margin-left:400px;
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background: red;
+            animation-name: exampleRed;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        p{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 >Самойлов Александр Сергеевич</h2>
+    <h4>Два объекта разных меняющихся цветов движутся по области 700 на
+        700 пикселей в противоположном направлении, проходя через каждый угол, при
+        встрече меняются. время движения 12 сек. Количество повторов минимально 3раза</h4>
+    <div class="div_size">
+        <div class="div_ItemBlue"><p>1</p></div>
+        <div class="div_ItemYellow"><p>2</p></div>
+        <div class="div_ItemGreen"><p>3</p></div>
+        <div class="div_ItemRed"><p>4</p></div>
+    </div>
+</body>
+</html>
