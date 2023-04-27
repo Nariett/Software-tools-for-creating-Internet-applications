@@ -1,0 +1,25 @@
+<html> 
+<head> 
+ <title> DOM </title> 
+  <script> 
+    // определяем функцию summa() 
+ function summa(){ 
+  var n1=parseInt(document.Sum.number1.value); 
+  var n2=parseInt(document.Sum.number2.value);  
+    
+  document.Sum.result.value=n1+n2; 
+ } 
+  </script> 
+</head> 
+<body> 
+    
+<form name=Sum> 
+    Первое число <INPUT type="text" name="number1"><BR> 
+    Второе число <INPUT type="text" name="number2"><BR> 
+    
+    <input type="button" name="but"  
+    value="Вычислить сумму" onClick="summa()"> 
+    <input type="text" name="result">
+</form> 
+</body> 
+</html>
