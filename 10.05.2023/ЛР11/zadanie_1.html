@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Идущие часы</title>
+    <script>
+        var msg = " ";
+        var id;
+        function getCurrentTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + " ";
+            msg = timeString;
+        }
+        function scrollMsg()
+        {
+            document.time.welcomeMsg.value = msg;
+            msg = msg.substring(1,msg.length)+msg.substring(0,1);
+            id =  setTimeout("scrollMsg()",1000);
+        }
+        function stopMsg()
+        {
+            clearTimeout(id);
+        }
+        setInterval(getCurrentTime, 1000);
+    </script>
+</head>
+<body onload="scrollMsg()">
+    <form name="time">
+        <h3>Текущее время:</h3>
+        <input type="text" id="currentTime" name="welcomeMsg" style="width:95px" readonly><br>
+        <input type="button" name="go" value="Пуск" onclick="scrollMsg()"> >>
+        <input type="button" name="stop" value="Стоп" onclick="stopMsg()">
+    </form>
+</body>
+</html>

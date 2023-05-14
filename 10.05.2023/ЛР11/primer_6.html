@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Пример 6</title>
+    <script language="JavaScript">
+        var msg="Бегущая строка";
+        function scrollMsg()
+        {
+            document.sceollerForm.Msg.value = msg;
+            msg = msg.substring(1,msg.length)+msg.substring(0,1);
+            setTimeout("scrollMsg()",150);
+        }
+    </script>
+</head>
+<body onload="scrollMsg()">
+    <form name = "sceollerForm">
+        <input type="text" name="Msg" value="" size=15>
+    </form>
+</body>
+</html>
