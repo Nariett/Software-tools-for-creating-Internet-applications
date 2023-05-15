@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Пример 3</title>
+    <script language="JavaScript">
+        function maxim()
+        {
+            var My_array = new Array;
+            var str = document.array_form.array_str.value;
+            My_array = str.split(' ');
+            var max = parseInt(My_array[0]);
+            for(var i = 1;i < My_array.length+1;i++)
+            {
+                if(parseInt(My_array[i])>max)
+                {
+                    max = parseInt(My_array[i]);
+                } 
+            }
+            alert('Максимальный элемент: ' + max);
+        }    
+    </script>
+</head>
+<body>
+    <form name="array_form">
+        Введите элементы массива через пробел<br>
+        <input type="text" name="array_str" size="30"><br><br>
+        <input type="button" name="but" value="Максимальный элемент" onclick="maxim();">
+    </form>
+</body>
+</html>

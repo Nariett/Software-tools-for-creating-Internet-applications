@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Задание 1</title>
+    <script language="JavaScript">
+        function time()
+        {
+            var now = new Date();
+            var hours = parseInt(now.getHours());
+            if(hours >= 7 && hours < 12)
+            {
+                alert("Доброе утро");
+            }
+            else if(hours >= 12 && hours < 17)
+            {
+                alert("Добрый день");
+            }
+            else if(hours >= 17 && hours < 0)
+            {
+                alert("Добрый вчер ")
+            }
+            else if(hours >= 0 && hours < 7)
+            {
+                alert("Добной ночи")
+            }
+        }
+    </script>
+</head>
+<body onload="time();">
+    
+</body>
+</html>

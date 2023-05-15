@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание 2</title>
+    <script language="JavaScript">
+        function Calc() {
+            var xf = parseInt(document.calc.first.value);
+            var xs = parseInt(document.calc.second.value);
+            var step = parseInt(document.calc.step.value);
+            var count = 0;
+            if (xf <= 0 || xs <= 0 || step <= 0) {
+                alert("Пожалуйста, введите положительные числа");
+                return;
+            }
+            if (xf >= xs) {
+                alert("Начальное значение должно быть меньше конечного значения");
+                return;
+            }
+            if (step > xs - xf) {
+                alert("Шаг не должен превышать разницу между начальным и конечным значениями");
+                return;
+            }
+            var znach = new Array();
+            var func = new Array();
+            for (var i = xf; i < xs; i += step) {
+                var res = 1 / Math.pow(2 * i - 3, 3);
+                znach[count] = i;
+                func[count] = res;
+                count++;
+            }
+            document.calc.table.value = "";
+            for(var i = 0 ; i < count;i++)
+            {
+                document.calc.table.value += "x = " + znach[i] + " y = " + func[i] + "\n";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form name="calc">
+        <h3>Расчет значений функции</h3><br>
+        y = 1 / (2x - 3)<sup>3</sup>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    Начальное значение x
+                </td>
+                <td>
+                    <input type="text" name="first">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Конечное значение x
+                </td>
+                <td>
+                    <input type="text" name="second">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Шаг
+                </td>
+                <td>
+                    <input type="text" name="step">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" name="but" value="рассчитать" onclick="Calc();">
+                </td>
+            </tr>
+        </table>
+        <textarea name="table" style="width: 500px;height: 500px;"></textarea>
+    </form>
+</body>
+</html>
