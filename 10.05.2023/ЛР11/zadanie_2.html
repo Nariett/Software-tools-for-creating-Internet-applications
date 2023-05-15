@@ -2,36 +2,40 @@
 <html>
 <head>
     <title>Идущие часы с одной кнопкой</title>
-    <script>
+    <script language="JavaScript">
         var msg = " ";
         var id;
-        var check = false;
+        var isStopped = false;
+
         function getCurrentTime() {
             var now = new Date();
             var hours = now.getHours();
             var minutes = now.getMinutes();
-            var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + " ";
+            var seconds = now.getSeconds();
+            var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') +':' +  seconds.toString().padStart(2, '0')+ " ";
             msg = timeString;
         }
-        function scrollMsg()
-        {
+
+        function scrollMsg() {
             document.time.welcomeMsg.value = msg;
-            msg = msg.substring(1,msg.length)+msg.substring(0,1);
-            id =  setTimeout("scrollMsg()",1000);
-        }
-        function stopMsg()
-        {
-            if (check == false) {
-                clearTimeout(id);
-                document.time.go.value = "Продолжить";
-                check = true;
-            } else {
-                scrollMsg();
-                document.time.go.value = "Остановить";
-                check = false;
-                id = setTimeout("scrollMsg()", 400);
+            msg = msg.substring(1,msg.length) + msg.substring(0,1);
+            if (!isStopped) {
+                id = setTimeout(scrollMsg, 200);
             }
         }
+
+        function stopMsg() {
+            if (isStopped) {
+                document.time.go.value = "Остановить";
+                isStopped = false;
+                scrollMsg();
+            } else {
+                clearTimeout(id);
+                document.time.go.value = "Продолжить";
+                isStopped = true;
+            }
+        }
+
         setInterval(getCurrentTime, 1000);
     </script>
 </head>
@@ -43,3 +47,4 @@
     </form>
 </body>
 </html>
+ 

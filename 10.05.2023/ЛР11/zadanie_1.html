@@ -2,26 +2,39 @@
 <html>
 <head>
     <title>Идущие часы</title>
-    <script>
+    <script language="JavaScript">
         var msg = " ";
         var id;
+        var isRunning = true;
+
         function getCurrentTime() {
             var now = new Date();
             var hours = now.getHours();
             var minutes = now.getMinutes();
-            var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + " ";
+            var seconds = now.getSeconds();
+            var timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' +  seconds.toString().padStart(2, '0') + " ";
             msg = timeString;
+            isRunning = true;
         }
-        function scrollMsg()
-        {
+
+        function scrollMsg() {
             document.time.welcomeMsg.value = msg;
-            msg = msg.substring(1,msg.length)+msg.substring(0,1);
-            id =  setTimeout("scrollMsg()",1000);
+            msg = msg.substring(1,msg.length) + msg.substring(0,1);
+            if (isRunning) {
+                id = setTimeout(scrollMsg, 250);
+            }
+            else 
+            {
+                stopMsg();
+            }
         }
-        function stopMsg()
-        {
+
+        function stopMsg() {
             clearTimeout(id);
+            document.time.welcomeMsg.value = msg;
+            isRunning = false;
         }
+
         setInterval(getCurrentTime, 1000);
     </script>
 </head>
