@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <title>Главная</title>
+  <link rel="stylesheet" type="text/css" href="Style.css" />
+  <script language="javascript">
+        function OpenMusicPage()
+        {
+            document.location='MusicPage.html';
+        }
+        function OpenContactsPage()
+        {
+            document.location='ContactsPage.html';
+        }
+        function OpenAuthPage()
+        {
+            document.location='AuthPage.html';
+        }
+  </script>
+</head>
+<body style="background-color: #222629" >
+    <div class="menu" style="margin-bottom: 5px;">
+        <h1 style="color:#95ff00;user-select: none;">Samoilov Sasha</h1>
+    </div>
+    <br>
+    <div class="menu" style="margin-bottom: 5px;">
+        <input type="button" class="but" value="Контакты" style="margin-top:15px" onclick="OpenContactsPage();">
+        <input type="button" class="but" value="Музыка" onclick="OpenMusicPage();">
+        <input type="button" class="but" value="Кабинет" onclick="OpenAuthPage();">
+    </div>
+    <div style="display: inline-flex">
+        <div class="picture" style="background-image: url(cat.jpg); background-size: contain;"> </div>
+        <div class="info">
+            <p  style="margin-left: 10px; font-size: 15px; font-family: Arial, Helvetica, sans-serif;">Привет меня зовут Саша. Учусь в колледже бизнеса и права на программиста. В свободное от учебы время разрабатываю такие HTML странички за 300$. Самые сильными моими качествами явлется чувство вкуса (которое отображена на данной странице). Так же в свободное время разрабатываю приложения на C# Java Python</p>
+        </div>
+    </div>
+    <div style="margin-top: 10px;display: inline-flex; align-items: center; margin-left: 27%;">
+        <div class="skills" >
+            <div class="cap">
+                <a class="language">С#</a>
+            </div>
+            <div style=" height: 220px; margin-top: 60px;">
+                <a href="https://github.com/Nariett/CSLabs" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">C# Labs</a><br>
+                <a href="https://github.com/Nariett/Educational-practice-in-programming" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">C# Practice</a>
+                <a href="https://github.com/Nariett/Coursework-on-design-and-programming-and-programming-languages" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">C# CourseWork</a>
+            </div>
+        </div>
+        <div class="skills" > 
+            <div class="cap">
+                <a class="language">Java</a>
+                <div style=" height: 220px; margin-top: 100px;">
+                    <a href="https://github.com/Nariett/JavaLabs" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">Java Labs</a><br>
+                </div>
+            </div>        
+        </div>
+        <div class="skills" >
+            <div class="cap">
+                <a class="language">Python</a>
+                <div style=" height: 220px; margin-top: 90px;">
+                    <a href="https://github.com/Nariett/PythonLabs" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">Python Labs</a><br>
+                    <a href="https://github.com/Nariett/Software-testing/tree/main/Lab21" style="text-decoration: none;font-size: 20px;color:#B4BFBB;">Python Testing</a><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; color:#86C232;font-size: 15px;  font-family: 'Open Sans', sans-serif;font-size: 0.85vw;">
+        <p>&copy; 2023 Моя Страница. Твоих прав тут нет.</p>
+    </footer>
+</body>
+</html>

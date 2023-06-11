@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Style.css"/>
+    <audio id="Sound1">
+        <source src="Music/Drug.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound2">
+        <source src="Music/Eva.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound3">
+        <source src="Music/Hit.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound4">
+        <source src="Music/Publika.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound5">
+        <source src="Music/Infinite.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound6">
+        <source src="Music/Kino.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound7">
+        <source src="Music/Fanat.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="Sound8">
+        <source src="Music/Moskva.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        var currentTrack = null;
+
+        function playTrack(divName) {
+            if (currentTrack !== null && currentTrack !== divName) {
+                var prevAudio = document.getElementById(currentTrack);
+                prevAudio.pause();
+                document.querySelector(`[name="${currentTrack}"]`).style.animation = "";
+            }
+
+            var audio = document.getElementById(divName);
+            if (audio.paused) {
+                audio.play();
+                document.querySelector(`[name="${divName}"]`).style.animation = "rotate 2s linear infinite";
+                currentTrack = divName;
+            } else {
+                audio.pause();
+                document.querySelector(`[name="${divName}"]`).style.animation = "";
+                currentTrack = null;
+            }
+        }
+    </script>
+    <title>Музыка</title>
+</head>
+<body style="background-color: #222629;user-select: none;">
+    <div>
+        <h1 style="color:#95ff00;text-align: center; font-family: 'HARDBOR'; margin-bottom: 0px;user-select: none;">MY FAVORITE MUSIC</h1>
+        <h1 style="color:#95ff00;text-align: center; font-family: 'HARDBOR'; margin-top: 0px;user-select: none;">MY CHART</h1>
+        <div class="musicTrack">
+            <div name="Sound1" class="artist" style="background-image: url(Artists/Drug.jpg);" onclick="playTrack('Sound1')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Drug</h2>
+                <h4>GOLDEN8OI</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span>&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound2" class="artist" style="background-image: url(Artists/Eva.jpg);" onclick="playTrack('Sound2')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Ева (Remix)</h2>
+                <h4>Винтаж</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound3" class="artist" style="background-image: url(Artists/Hit.jpg);" onclick="playTrack('Sound3')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;width: 220px;">
+                <h2>Hit</h2>
+                <h4>TVETH x THE DAWLESS</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound4" class="artist" style="background-image: url(Artists/Publica.jpg);" onclick="playTrack('Sound4')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Publika Gaultier</h2>
+                <h4>RLGN </h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span >&#9734;</span>
+                    <span >&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound5" class="artist" style="background-image: url(Artists/Infinite.jpg);" onclick="playTrack('Sound5')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Infinite Tsukuyomi</h2>
+                <h4>ROCKET</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>          
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound6" class="artist" style="background-image: url(Artists/KINO.jpg);" onclick="playTrack('Sound6')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>KINO</h2>
+                <h4>THE DAWLESS, КАССЕТА</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span>&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound7" class="artist" style="background-image: url(Artists/Fanat.jpg);" onclick="playTrack('Sound7')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2 style="font-size: 15px;">Почему Ты Еще Не Фанат?</h2>
+                <h4>Серега Пират</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                </div>
+            </div>
+        </div>
+        <div class="musicTrack">
+            <div name="Sound8" class="artist" style="background-image: url(Artists/Moskva.jpg);" onclick="playTrack('Sound8')">
+                <div class="inner-circle">
+                    <div class="innermost-circle"></div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <h2>Moskva-Baghdad</h2>
+                <h4>Any Act</h4>
+                <div style="color: gray; margin-left: 20px; margin-top:0px; font-size: 30px">
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                    <span class="yellow">&#9734;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center; color:#86C232;font-size: 15px;  font-family: 'Open Sans', sans-serif;font-size: 0.85vw; margin-top: 210px;">
+        <p>&copy; 2023 Моя Страница. Твоих прав тут нет.</p>
+    </footer>
+</body>
+</html>

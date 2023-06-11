@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Style.css"/>
+    <title>Аутентификация</title>
+    <script language="javascript">
+        function OpenRegPage()
+        {
+            document.location='RegPage.html';
+        }
+        function OpenMain(obj)
+        {
+            var login = obj.Login.value;
+            var password = obj.Pass.value;
+            if(login == "Admin" && password == "Admin")
+            {
+                document.location='MainPage.html';
+            }
+            else
+            {
+                alert("Ошика входа в систему. Зарегистрируйтесь");
+            }
+        }
+  </script>
+</head>
+<body style="background-color: #222629;">
+    <p class="language" style="text-align: right;color: #95ff00;user-select: none;" onclick="OpenRegPage()">Регистрация</p>
+    <div class="pageAuth" style="align-items: center;">
+        <form name="LogPass">
+            <p class="language" style="text-align: center; padding: 15px;padding-bottom: 0px;user-select: none;">Аутентификация</p>
+            <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Логин</p>
+            <input type="text" class="authText" name="Login">
+            <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Пароль</p>
+            <input type="text" class="authText" name="Pass">
+            <input type="button" class="authText" style="width: 150px; margin-left: 125px; margin-top: 10px;" id="Password" value="Войти" onclick="OpenMain(LogPass)">
+        </form>
+    </div>
+</body>
+</html>
