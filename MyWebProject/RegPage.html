@@ -3,21 +3,34 @@
     <link rel="stylesheet" type="text/css" href="Style.css"/>
     <title>Регистрация</title>
     <script language="javascript">
-        function OpenMainPage()
+         function OpenMainPage(obj)
         {
-            alert("Вы зарегистрировались");
-            document.location='MainPage.html';
+            var login = obj.Login.value;
+            var password = obj.Pass.value;
+            var correctPass = obj.CorrectPassword.value;
+            if((password == correctPass) && login != "" && !(/^\d/.test(login)) && login.lenght > 5 && password >5)
+            {
+                document.location='MainPage.html';
+            }
+            else
+            {
+                alert("Ошибка входа в систему. Зарегистрируйтесь");
+            }
         }
   </script>
 </head>
 <body style="background-color: #222629;">
     <div class="pageAuth" style="align-items: center;">
-        <p class="language" style="text-align: center; padding: 15px;padding-bottom: 0px;user-select: none;">Регистрация</p>
-        <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Логин</p>
-        <input type="text" class="authText" id="Login">
-        <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Пароль</p>
-        <input type="text" class="authText" id="Password">
-        <input type="button" class="authText" style="width: 150px; margin-left: 125px; margin-top: 10px;" id="Password" value="Войти" onclick="OpenMainPage()">
+        <form name="LogPass">
+            <p class="language" style="text-align: center; padding: 15px;padding-bottom: 0px;user-select: none;">Регистрация</p>
+            <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Логин</p>
+            <input type="text" class="authText" id="Login">
+            <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Пароль</p>
+            <input type="text" class="authText" id="Pass">
+            <p class="language" style="text-align: center; padding: 15px;font-size: 15px; padding-top: 0px; padding-bottom: 0px;user-select: none;">Повторите пароль</p>
+            <input type="text" class="authText" id="CorrectPassword">
+            <input type="button" class="authText" style="width: 150px; margin-left: 125px; margin-top: 10px;" id="Password" value="Войти" onclick="OpenMainPage(LogPass)">
+        </form>
     </div>
 </body>
 </html>
