@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lab15</title>
+</head>
+<body>
+    <div>
+        <script>
+            var header = window.document.getElementById("header");
+
+            var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            document.write("Ширина = " + w + "<br><br>" + "Высота   = " + h + "<br>")
+
+            var screenWidth = screen.width;
+            var screenHeight = screen.height;
+            var availScreenWidth = screen.availWidth;
+            var availScreenHeight = screen.availHeight;
+            var colorDepth = screen.colorDepth;
+        </script>
+        <div id="demo">
+            <p>Результаты:</p>
+            <p>Ширина экрана: <span id="screenWidth"></span></p>
+            <p>Высота экрана: <span id="screenHeight"></span></p>
+            <p>Доступная ширина экрана: <span id="availScreenWidth"></span></p>
+            <p>Доступная высота экрана: <span id="availScreenHeight"></span></p>
+            <p>Глубина цвета экрана: <span id="colorDepth"></span></p>
+        </div>
+        <script>
+            document.getElementById("screenWidth").textContent = screenWidth;
+            document.getElementById("screenHeight").textContent = screenHeight;
+            document.getElementById("availScreenWidth").textContent = availScreenWidth;
+            document.getElementById("availScreenHeight").textContent = availScreenHeight;
+            document.getElementById("colorDepth").textContent = colorDepth;
+         </script>
+    </div>
+</body>
+</html>

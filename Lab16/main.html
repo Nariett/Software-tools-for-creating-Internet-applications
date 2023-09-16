@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задания с кнопкой и input</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Введите текст">
+    <button id="changeTextButton" onclick="buttonClickOne()">Изменить текст</button>
+    <input type="text" id="input2" placeholder="Другой input">
+    <button id="swapTextButton" onclick="swapButtonClick()">Обменять текст</button>
+
+    <script>
+        let changeTextButton = document.getElementById('changeTextButton');
+        let input1 = document.getElementById('input1');
+        let input2 = document.getElementById('input2');
+        let swapTextButton = document.getElementById('swapTextButton');
+        function buttonClickOne()
+        {
+            const currentText = changeTextButton.textContent;
+            if (currentText === 'Изменить текст') {
+                changeTextButton.textContent = 'Новый текст кнопки';
+                alert(input1.value)
+            } else {
+                changeTextButton.textContent = 'Изменить текст';
+                alert(input1.value)
+            }
+        }
+        function swapButtonClick()
+        {
+            const text1 = input1.value;
+            const text2 = input2.value;
+            input1.value = text2;
+            input2.value = text1;
+        };
+    </script>
+</body>
+</html>
