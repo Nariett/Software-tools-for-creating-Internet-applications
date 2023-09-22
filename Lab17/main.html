@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function summa(){
+            var n1=parseInt(document.Sum.number1.value);
+            var n2=parseInt(document.Sum.number2.value);
+            document.Sum.result.value=n1+n2;
+            }
+    </script>
+    <form name="Sum">
+        Первое число <input type="text" name="number1"><br>
+        Второе число <input type="text" name="number2"><br><br>
+        <input type="button" name="but" value="Вычислить сумму" onclick="summa()"><br><br>
+        Сумма<input type="text" name="result">
+    </form>
+</body>
+</html>
