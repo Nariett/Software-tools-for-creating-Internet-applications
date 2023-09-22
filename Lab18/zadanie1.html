@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с изображениями</title>
+    <script type="text/javascript">
+        var imLibr = new Array();
+        imLibr["image1"] = new Image(120, 90);
+        imLibr["image1"].src = "img/1.gif";
+        imLibr["image2"] = new Image(120, 90);
+        imLibr["image2"].src = "img/2.gif";
+        imLibr["image3"] = new Image(120, 90);
+        imLibr["image3"].src = "img/3.gif";
+        imLibr["image4"] = new Image(120, 90);
+        imLibr["image4"].src = "img/4.gif";
+        function loadIm(list) {
+          var b = list.load.options.selectedIndex;
+          var img = list.load.options[b].value;
+          document.thum.src = imLibr[img].src;
+        }
+        function showImage(imageName) {
+          document.thum.src = imLibr[imageName].src;
+        }
+        </script>
+        <style>
+        select {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        </style>
+</head>
+<body>
+    <h2>Объект Image</h2>
+    <img src="img/1.gif" name="thum" height="90" width="120">
+    <form name="f">
+      <select name="load" onChange="loadIm(f)">
+        <option value="image1" onmouseover="showImage('image1')">Первое</option>
+        <option value="image2" onmouseover="showImage('image2')">Второе</option>
+        <option value="image3" onmouseover="showImage('image3')">Третье</option>
+        <option value="image4" onmouseover="showImage('image4')">Четвертое</option>
+      </select>
+    </form>
+</body>
+</html>
