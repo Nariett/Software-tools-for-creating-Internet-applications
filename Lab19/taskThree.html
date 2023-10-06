@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Кнопка 1</button>
+    <button class="btn2">Кнопка 2</button><br>
+    <label class="label1"></label><br>
+    <script>
+        var count = 0;
+        const button = document.querySelector('.btn');
+        const buttonTwo = document.querySelector('.btn2');
+        function handleClickOne(){
+            count ++;
+            document.querySelector('.label1').textContent = count;
+        }
+        function handleClickTwo(){
+            count ++;
+            document.querySelector('.label1').textContent = count;
+        }
+        button.addEventListener('click',handleClickOne)
+        buttonTwo.addEventListener('click',handleClickTwo)    
+    </script>
+</body>
+</html>

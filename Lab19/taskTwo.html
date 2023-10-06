@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btnOne">Кнопка 1</button>
+    <label class="label1"></label><br>
+
+    <button class="btnTwo">Кнопка 2</button>
+    <label class="label2"></label><br>
+
+    <button class="btnThree">Кнопка 3</button>
+    <label class="label3"></label><br>
+    <script>
+        var one = 0;
+        var two = 0;
+        var three = 0;
+        const button = document.querySelector('.btnOne');
+        const buttonTwo = document.querySelector('.btnTwo');
+        const buttonThree = document.querySelector('.btnThree');
+        function handleClickOne(){
+            one ++;
+            document.querySelector('.label1').textContent = one;
+        }
+        function handleClickTwo(){
+            two ++;
+            document.querySelector('.label2').textContent = two;
+        }
+        function handleClickThree(){
+            three++;
+            document.querySelector('.label3').textContent = three;
+        }
+        button.addEventListener('click',handleClickOne)
+        buttonTwo.addEventListener('click',handleClickTwo)
+        buttonThree.addEventListener('click',handleClickThree)
+    
+    </script>
+</body>
+</html>

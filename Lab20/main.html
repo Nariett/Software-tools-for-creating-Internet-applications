@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #animatedShape {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            transition: all 1s; /* Добавляем переход для плавных изменений */
+            position: absolute;
+            top: 45%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <title>Анимация вращения и превращения в круг</title>
+</head>
+<body style="padding: 0; margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh;">
+    <div id="animatedShape"></div>
+
+    <script>
+        var animatedShape = document.getElementById('animatedShape');
+        var rotation = 0;
+        var borderRadius = 0;
+        var isCircle = true;
+
+        function animate() {
+            animatedShape.style.transform = `rotate(${rotation}deg)`;
+            if (isCircle) {
+                animatedShape.style.borderRadius = `${borderRadius}%`;
+            } else {
+                animatedShape.style.borderRadius = '0';
+            }
+
+            rotation += 1;
+            borderRadius += 0.1;
+
+            if (borderRadius > 100) {
+                isCircle = !isCircle;
+                rotation = 0;
+                borderRadius = 0;
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="btn">Click 1</button>
+        <button class="btn">Click 2</button>
+        <button class="btn">Click 3</button>
+        <button class="btn">Click 4</button>
+        <button class="btn">Click 5</button>
+        <button class="btn">Click 6</button>
+    </div>
+    <script>
+        const button = document.querySelectorAll('.btn')
+        function handleClick(e){
+            console.log('click',e.target);
+        }
+        button.forEach((button) =>{
+            button.addEventListener('click',handleClick)
+        })
+    </script>
+    <!--<script>
+        const button = document.querySelector('.btn');
+        const buttonTwo = document.querySelector('.btnTwo');
+        /*button.addEventListener('click',function()
+        {
+            console.log('click');
+        })*/
+        function handleClick(){
+            console.log('click');
+        }
+        button.addEventListener('click',handleClick)
+        buttonTwo.addEventListener('click',handleClick)
+        buttonTwo.removeEventListener('click',handleClick)
+    </script>-->
+</body>
+</html>
