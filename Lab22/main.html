@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const regex1 = /a.b/g;
+        const str1 = 'ahb acb aeb aeeb adcb axeb';
+        console.log(str1.match(regex1));
+
+        const regex2 = /a..a/g;
+        const str2 = 'aba aca aea abba adca abea';
+        console.log(str2.match(regex2));
+
+        const regex3 = /a..a/g;
+        const str3 = 'aba aca aea abba adca abea';
+        console.log(str3.match(regex3));
+
+        const regex4 = /a\.a/g;
+        const str4 = 'a.a aba aea';
+        console.log(str4.match(regex4));
+
+        const regex5 = /2\+3/g;
+        const str5 = '2+3 223 2223';
+        console.log(str5.match(regex5));
+
+        const regex6 = /2\++3/g;
+        const str6 = '23 2+3 2++3 2+++3 345 567';
+        console.log(str6.match(regex6));
+
+        const regex7 = /2\+*3|23/g;
+        const str7 = '23 2+3 2++3 2+++3 445 677';
+        console.log(str7.match(regex7));
+    </script>
+</body>
+</html>

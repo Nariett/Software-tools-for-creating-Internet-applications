@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студенческая газета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .section-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section-item {
+            margin-bottom: 10px;
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+         var List = []
+        function createNewspaper() {
+            removeContainer();
+            List.splice(0, List.length);
+            if (document.getElementById("news").checked) {
+                List.push("Новости");
+            }
+            if (document.getElementById("guests").checked) {
+                List.push("Гости");
+            }
+            if (document.getElementById("awards").checked) {
+                List.push("Награждения");
+            }
+            if (document.getElementById("education").checked) {
+                List.push("Образование")
+            }
+            if (document.getElementById("leisure").checked) {
+                List.push("Досуг")
+            }
+            if (document.getElementById("entertainment").checked) {
+                List.push("Развлечения")
+            }
+            if (document.getElementById("career").checked) {
+                List.push("Карьера")
+            }
+            createHeading();
+        }
+        function createHeading() {
+            var containerDiv = document.createElement("div");
+            for (var i = 0; i < List.length; i++) {
+                var newHeading = document.createElement("h5");
+                var headingText = document.createTextNode(List[i]);
+                newHeading.appendChild(headingText);
+                containerDiv.appendChild(newHeading);
+            }
+            containerDiv.id = "myContainer";
+            document.body.appendChild(containerDiv);
+        }
+        function removeContainer() {
+            var containerToRemove = document.getElementById("myContainer");
+            if (containerToRemove) {
+                containerToRemove.remove();
+            }
+        }
+
+    </script>
+    <h2>Разделы студенческой газеты</h2>
+    <ul class="section-list">
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="news"> Новости
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="guests"> Гости
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="awards"> Награждения
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="education"> Образование
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="leisure"> Досуг
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="entertainment"> Развлечения
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <input type="checkbox" id="career"> Карьера
+            </label>
+        </li>
+        <li class="section-item">
+            <label>
+                <button onclick="createNewspaper()">Создать газету</button>
+            </label>
+        </li>
+    </ul>
+</body>
+</html>
