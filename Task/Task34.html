@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 34</title>
+</head>
+
+<body>
+    <script>
+        let num = 1000;
+        let iterationsWhile = 0;
+
+        while (num >= 50) {
+            num /= 2;
+            iterationsWhile++;
+        }
+
+        console.log("Решение через цикл while:");
+        console.log("Полученное число:", num);
+        console.log("Количество итераций:", iterationsWhile);
+
+        num = 1000;
+
+        let iterationsFor;
+
+        for (iterationsFor = 0; num >= 50; iterationsFor++) {
+            num /= 2;
+        }
+
+        console.log("\nРешение через цикл for:");
+        console.log("Полученное число:", num);
+        console.log("Количество итераций:", iterationsFor);
+    </script>
+</body>
+
+</html>

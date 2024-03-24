@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task35</title>
+</head>
+<body>
+    <input type="checkbox" id="checkbox"  onclick="check()"/>
+    <label for="checkbox" id="label">не отмечен<br/>
+    <script>
+        function check() {
+            if(document.getElementById("checkbox").checked){
+                label.innerText = "отмечен";
+            } else {
+                label.innerText = "не отмечен";
+            }
+        }
+    </script>    
+</body>
+</html>

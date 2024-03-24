@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 32</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="textBox" oninput="checkedColor()">
+    <ol>
+        <li>Саша</li>
+        <li>Паша</li>
+        <li>Ваня</li>
+    </ol>
+    <script>
+        function checkedColor() {
+            var textBoxValue = document.getElementById("textBox").value;
+            var listItems = document.querySelectorAll("ol li");
+
+            if (!isNaN(textBoxValue) && textBoxValue > 0 && textBoxValue <= listItems.length) {
+                listItems.forEach(function(item) {
+                    item.classList.remove("highlight");
+                });
+                listItems[textBoxValue - 1].classList.add("highlight");
+            } else {
+                listItems.forEach(function(item) {
+                    item.classList.remove("highlight");
+                });
+            }
+        }
+    </script>
+</body>
+</html>

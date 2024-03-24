@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 57</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <table id="depositTable" border="1">
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+            <td></td>
+            <td>Ячейка 4</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Ячейка 6</td>
+            <td>Ячейка 7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ячейка 9</td>
+            <td></td>
+            <td></td>
+            <td>Ячейка 12</td>
+        </tr>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            var nonEmptyRows = $('#depositTable td:not(:empty)').parent();
+            var alertMessage = "Содержимое непустых ячеек:\n";
+            nonEmptyRows.each(function (index, row) {
+                $(row).find('td:not(:empty)').each(function () {
+                    alertMessage += $(this).text() + "\n";
+                });
+            });
+            alert(alertMessage);
+        });
+    </script>
+</body>
+
+</html>

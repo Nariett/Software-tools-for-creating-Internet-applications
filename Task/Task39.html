@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 39</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        function findNumbers() {
+            var result = [];
+            for (var i = 100; i < 1000; i++) {
+                var digits = i.toString().split('').map(Number);
+
+                if (digits[0] === digits[1] + digits[2]) {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        var numbers = findNumbers();
+        var resultDiv = document.getElementById('result'); 
+        resultDiv.textContent = "Трехзначные числа, где первая цифра равна сумме второй и третьей:" + numbers;
+    </script>
+</body>
+</html>

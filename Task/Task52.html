@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 52</title>
+    <style>
+        #result {
+            padding: 10px;
+            border: 2px solid;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="calculateAverage()">Вычислить</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateAverage() {
+            const numbers = Array.from({ length: 10 }, () => Math.round(Math.random() * 20));
+            alert(`числа в массиве ${numbers}`)
+            const oddNumbers = numbers.filter(num => num % 2 !== 0);
+            
+            let sum = 0;
+            for (let num of oddNumbers) {
+                sum += num;
+            }
+
+            let average = sum / oddNumbers.length;
+            average = Math.round(average * 100) / 100;
+
+            let resultElement = document.getElementById('result');
+            resultElement.textContent = `Среднее арифметическое нечетных чисел: ${average}`;
+
+            if (average > 10) {
+                resultElement.classList.add('blue');
+            } else {
+                resultElement.classList.remove('blue');
+            }
+        }
+    </script>
+</body>
+
+</html>

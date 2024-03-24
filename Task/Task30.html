@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 30</title>
+</head>
+<body>
+    <input type="text" id="1" placeholder="Введите значение 'a'">
+    <input type="text" id="2" placeholder="Введите значение 'b'">
+    <input type="text" id="3" placeholder="Введите значение 'x'">
+    <input type="button" onclick="printNumbersLessThanX()" value="Print Numbers">
+    <script>
+        function printNumbersLessThanX() {
+            var a = parseInt(document.getElementById('1').value);
+            var b = parseInt(document.getElementById('2').value);
+            var x = parseInt(document.getElementById('3').value);
+
+            if (isNaN(a) || isNaN(b) || isNaN(x)) {
+                console.log("Заполните все поля");
+                return;
+            }
+
+            if (x < a || x > b) {
+                console.log("Число X не находится в пределах отрезка [a; b]");
+                return;
+            }
+
+            for (var i = a; i < x; i++) {
+                console.log(i);
+            }
+        }
+    </script>
+
+</body>
+</html>

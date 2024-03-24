@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: #bebebe;
+        }
+        .div{
+            background-color:#eeebeb;
+            height: 50px;
+            display: flex;
+            align-items: center; 
+            width: 500px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating a chart</h1>
+    <p>To create a chart, we need to instantiale the Chart class. To do this, we need<br>
+    to pass in the 2d conterx of where we want to draw tha chart. Here's an<br>
+    example</p>
+    <div class="div" style="height: 30px;">
+        &lt;canvas id="myChart" width="400" height="400"&gt;&lt;/canvas&gt;
+    </div><br>
+    <div class="div">
+        //Get the context of the canvas element we want to select<br>
+        var ctx = document.get.ElementById("myChart").getContext("2b");
+        var myNewChart = new Chart(ctx).PolarArea(data);
+    </div>
+    <p>We can also get the context of our canvas with jQuery. To do this, we need to<br>
+    get the DOM node out of the jQuery collection, and call the<br>
+    getContext("2d") method on that.</p>
+    <div class="div">
+        //Get context with jQuery - using jQuery's .get() method.<br>
+        var ctx = $("#myChart").get(0).getContext("2d");
+        //This will get the first returned node in the jQuery collection
+        var myNewChart = new Chart(ctx)
+    </div>
+    <p>After we've instantiated the Chart class on the canvas we want to draw on,<br>
+         Chart js will handle the scaling for retina displays.
+
+    </p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 47</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        function findDivisors(number) {
+            var divisors = [];
+            for (var i = 1; i <= Math.floor(number / 2); i++) {
+                if (number % i === 0) {
+                    divisors.push(i);
+                }
+            }
+            divisors.push(number);
+            return divisors;
+        }
+        var inputNumber = 30; 
+        var divisorsArray = findDivisors(inputNumber);
+        var resultDiv = document.getElementById('result'); 
+        resultDiv.textContent = 'Делители числа 30: ' + divisorsArray; 
+    </script>
+</body>
+</html>

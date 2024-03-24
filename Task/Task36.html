@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 36</title>
+</head>
+<body>
+    <p id="output">Выбрано: </p>
+
+    <input type="radio" name="group" value="Опция 1" onchange="updateOutput(this)"> Опция 1 <br>
+    <input type="radio" name="group" value="Опция 2" onchange="updateOutput(this)"> Опция 2 <br>
+    <input type="radio" name="group" value="Опция 3" onchange="updateOutput(this)"> Опция 3 <br>
+    <input type="radio" name="group" value="Опция 4" onchange="updateOutput(this)"> Опция 4 <br>
+
+    <script>
+        function updateOutput(selectedRadio) {
+            var outputParagraph = document.getElementById("output");
+            outputParagraph.textContent = "Выбрано: " + selectedRadio.value;
+        }
+    </script>
+</body>
+</html>

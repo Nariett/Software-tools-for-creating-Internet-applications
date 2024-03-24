@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 46</title>
+    <style>
+        #outputText {
+            font-size: 16px;
+        }
+        .cross-out {
+            text-decoration: line-through;
+        }
+        .make-bold {
+            font-weight: bold;
+        }
+        .make-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="outputText">Пример текста для изменения стиля</p>
+    
+    <label>
+        <input type="checkbox" value="cross-out" onchange="changeStyle(this)"> Перечеркнуть
+    </label>
+    
+    <label>
+        <input type="checkbox" value="make-bold" onchange="changeStyle(this)"> Сделать жирным
+    </label>
+    
+    <label>
+        <input type="checkbox" value="make-red" onchange="changeStyle(this)"> Сделать красным
+    </label>
+
+    <script>
+        function changeStyle(checkbox) {
+            var outputText = document.getElementById('outputText');
+            var styleType = checkbox.value;
+            if (checkbox.checked) {
+                outputText.classList.add(styleType);
+            } else {
+                outputText.classList.remove(styleType);
+            }
+        }
+    </script>
+</body>
+</html>

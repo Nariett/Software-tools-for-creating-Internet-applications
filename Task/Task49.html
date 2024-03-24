@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 49</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <script>
+        function NumberRange(a, b) {
+            this.start = a;
+            this.end = b;
+        }
+        NumberRange.prototype.printDivisibleByX = function(X) {
+            var resultElement = document.getElementById('result');
+            var output = 'Числа в отрезке [' + this.start + '; ' + this.end + '], делящиеся на ' + X + ':\n';
+            for (var i = this.start; i <= this.end; i++) {
+                if (i % X === 0) {
+                    output += i + '\n';
+                }
+            }
+            resultElement.textContent = output;
+        };
+        var range = new NumberRange(10, 50); 
+        var X = 5; 
+        range.printDivisibleByX(X);
+    </script>
+</body>
+</html>

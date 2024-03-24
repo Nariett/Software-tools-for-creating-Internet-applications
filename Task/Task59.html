@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример</title>
+    <style>
+        #container {
+            position: relative;
+            display: flex;
+        }
+        .rectangle {
+            width: 100px;
+            height: 300px;
+            background-color: yellow;
+            margin-bottom: 10px;
+            margin-left: 100px;
+            cursor: pointer;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="resetPage()">Сбросить</button>
+<div id="container">
+    <div class="rectangle" onclick="changeRectangle(this)"></div>
+    <div class="rectangle" onclick="changeRectangle(this)"></div>
+    <div class="rectangle" onclick="changeRectangle(this)"></div>
+    <div class="rectangle" onclick="changeRectangle(this)"></div>
+    <div class="rectangle" onclick="changeRectangle(this)"></div>
+</div>
+
+<script>
+
+    function changeRectangle(rectangle) {
+        const originalHeight = 100;
+        const newHeight = Math.floor(Math.random() * (300 - 20 + 1)) + 20;
+        const currentHeight = parseInt(rectangle.style.height) || originalHeight;
+        rectangle.style.backgroundColor = getRandomColor();
+        rectangle.style.height = currentHeight === originalHeight ? newHeight + "px" : originalHeight + "px";
+    }
+
+    function resetPage() {
+        const container = document.getElementById("container");
+        container.innerHTML = "";
+
+        for (let i = 0; i < 5; i++) {
+            const rectangle = document.createElement("div");
+            rectangle.className = "rectangle";
+            rectangle.style.left = i * 70 + "px";
+            rectangle.addEventListener("click", function() {
+                changeRectangle(rectangle);
+            });
+            container.appendChild(rectangle);
+        }
+    }
+
+    function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+</script>
+
+</body>
+</html>

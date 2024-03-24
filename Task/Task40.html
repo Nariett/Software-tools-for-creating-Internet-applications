@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 40</title>
+</head>
+<body>
+    <script>
+       
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 21) - 10;
+        }
+        var arr = [];
+        for (var i = 0; i < 50; i++) {
+            arr.push(getRandomNumber());
+        }
+        console.log(arr);
+        var sum = 0;
+        for (var x in arr){
+            if(arr[x] > 0){
+                sum += parseInt(arr[x]);
+            }
+        }
+        var resultDiv = document.createElement("div");
+        resultDiv.style.padding = "10px";
+        resultDiv.style.border = "1px solid";
+        if (sum > 100) {
+            resultDiv.style.backgroundColor = "purple";
+            resultDiv.style.border = "2px solid red";
+        } else {
+            resultDiv.style.backgroundColor = "yellow";
+            resultDiv.style.width = "1in";
+        }
+        resultDiv.innerText = "Sum: " + sum;
+        document.body.appendChild(resultDiv);
+    </script>
+</body>
+</html>

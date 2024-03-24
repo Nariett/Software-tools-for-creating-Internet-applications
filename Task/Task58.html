@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 58</title>
+</head>
+<body>
+    <button onclick="cloneButton()">Клонировать кнопку</button>
+    
+    <script>
+        function cloneButton() {
+            var originalButton = document.querySelector('button'); // Находим оригинальную кнопку
+            var clonedButton = originalButton.cloneNode(true); // Клонируем кнопку
+            clonedButton.textContent = 'Клон кнопки'; // Изменяем текст клонированной кнопки
+            
+            // Добавляем обработчик события для клонированной кнопки
+            clonedButton.onclick = function() {
+                cloneButton(); // При клике на клонированную кнопку создаем еще один клон
+            };
+            
+            document.body.appendChild(clonedButton); // Добавляем клонированную кнопку на страницу
+        }
+    </script>
+</body>
+</html>

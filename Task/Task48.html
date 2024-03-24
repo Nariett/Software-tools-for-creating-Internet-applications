@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 48</title>
+</head>
+<body>
+    <div id="hour"></div>
+    <div id="day"></div>
+    <div id="mounth"></div>
+    <script>
+        function secondsInHour() {
+            return 60 * 60;
+        }
+
+        function secondsInDay() {
+            return secondsInHour() * 24;
+        }
+
+        function secondsInMonth() {
+            return secondsInDay() * 30;
+        }
+        var seconds = document.getElementById('hour'); 
+        var day = document.getElementById('day'); 
+        var mounth= document.getElementById('mounth'); 
+        seconds.textContent = 'Количество секунд в часе:' + secondsInHour(); 
+        day.textContent = 'Количество секунд в сутках:' + secondsInDay();
+        mounth.textContent = 'Количество секунд в месяце:' + secondsInMonth();
+
+    </script>
+</body>
+</html>

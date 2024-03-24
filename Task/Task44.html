@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 44</title>
+    <style>
+        #movingElement {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="movingElement"></div>
+    <button onclick="moveLeft()">Move Left</button>
+    <button onclick="moveRight()">Move Right</button>
+
+    <script>
+        var currentPosition = 0; 
+
+        function moveLeft() {
+            currentPosition -= 100;
+            updatePosition();
+        }
+
+        function moveRight() {
+            currentPosition += 100; 
+            updatePosition();
+        }
+
+        function updatePosition() {
+            var movingElement = document.getElementById('movingElement');
+            movingElement.style.transform = 'translateX(' + currentPosition + 'px)';
+        }
+    </script>
+</body>
+
+</html>

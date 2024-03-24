@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 24</title>
+    <style>
+        body {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        .inputOne{
+            height: 50px;
+            width:140px;
+            background-color: #e3e3e3;
+            font-size: 15px ;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+        .inputTwo{
+            height: 50px;
+            width:140px;
+            background-color: #595959;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px 0px 0px 5px;
+            position: relative;
+        }
+        .inputTwo:after {
+            content: "";
+            width: 0; 
+            height: 0;
+            position: absolute; 
+            left: 100%;
+            border-width: 25px 0px 25px 20px;
+            border-style: solid;
+            border-color: transparent #595959;
+        }
+        p{
+            color:#e8925f;
+            position: absolute;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0px  0px 30px;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            position:absolute;
+            margin: 15px 0px 0px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div style="margin-top:10px; display: flex;;">
+        <div class="inputOne">
+            <img src="point.png">
+            <p>Приветствую</p>
+        </div>
+        <div class="inputTwo">
+            <img src="point.png">
+            <p>Приветствую</p>
+        </div>
+    </div>
+</body>
+</html>

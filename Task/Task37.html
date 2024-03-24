@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 37</title>
+</head>
+<body>
+    <input type="text" id="arrText" placeholder="Введите массив значений">
+    <input type="button" value ="Начать "onclick="addArray()">
+    <script>
+        alert("Введите массив 10 значений в диапазоне от -10 до 10");
+        function addArray()
+        {   
+            var arr = (document.getElementById('arrText').value).split(' ');
+            var check = true;
+            if (arr.length >= 10) {
+                for (var i = 0; i < arr.length; i++) {
+                    var number = Number(arr[i]);
+                    if (isNaN(number) || number < -10 || number > 10) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    var min = Math.min(...arr);
+                    var countMin = 0;
+                    for(var i = 0; i < arr.length; i++){
+                        if(arr[i] == min){
+                            countMin++;
+                        }
+                    }
+                    if (countMin > 2) {
+                        showDialog("Количество минимальных элементов: " + countMin, "red", "10mm");
+                    } else {
+                        showDialog("Количество минимальных элементов: " + countMin, "yellow", "1in");
+                    }
+                } else {
+                    alert("Проверьте массив")
+                }
+            }
+            else {
+                alert("Введите массив рамером больше 10")
+            }
+        }
+
+        function showDialog(message, color, fontSize) {
+            var dialogBox = document.createElement("div");
+            dialogBox.textContent = message;
+            dialogBox.style.color = color;
+            dialogBox.style.fontSize = fontSize;
+            dialogBox.style.padding = "10px";
+            dialogBox.style.border = "1px solid #000";
+            dialogBox.style.margin = "20px";
+            document.body.appendChild(dialogBox);
+        }
+    </script>
+</body>
+</html>

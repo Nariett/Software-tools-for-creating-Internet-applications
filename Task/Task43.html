@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 43</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Текущий день недели:</h1>
+    <p id="currentDay"></p>
+
+    <script>
+        var week = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        var currentDate = new Date();
+        var currentDayIndex = currentDate.getDay();
+        var currentDayElement = document.getElementById('currentDay');
+        currentDayElement.textContent = 'Сегодня ' + week[currentDayIndex];
+        var date20060606 = new Date('2006-06-06');
+        var dayOfWeek20060606 = week[date20060606.getDay()];
+        console.log('06.06.2006 был ' + dayOfWeek20060606);
+    </script>
+</body>
+</html>

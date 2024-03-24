@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 33</title>
+</head>
+<body>
+    <input type="text" id="textbox">
+    <input type="button" id="button" value="Начать" onclick="timer(document.getElementById('textbox').value)">
+    <script>
+        function timer(x){
+            function updateTextboxValue(i) {
+            document.getElementById('textbox').value = i;
+
+            if (i > 0) {
+                setTimeout(function() {
+                    updateTextboxValue(i - 1);
+                }, 1000);
+            } else {
+                alert("Отчет времени окончен");
+            }
+        }
+
+        updateTextboxValue(x);
+        }
+    </script>
+</body>
+</html>

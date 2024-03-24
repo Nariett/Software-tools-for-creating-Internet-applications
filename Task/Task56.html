@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 56</title>
+</head>
+
+<body>
+    <table id="depositTable" border="1">
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+            <td></td>
+            <td>Ячейка 4</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Ячейка 6</td>
+            <td>Ячейка 7</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ячейка 9</td>
+            <td></td>
+            <td></td>
+            <td>Ячейка 12</td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var table = document.getElementById("depositTable");
+            var emptyCellIndexes = [];
+            for (var i = 0; i < table.rows.length; i++) {
+                var row = table.rows[i];
+                for (var j = 0; j < row.cells.length; j++) {
+                    var cell = row.cells[j];
+                    if (cell.textContent.trim() === "") {
+                        // Добавляем номера пустых ячеек в массив
+                        emptyCellIndexes.push([i, j]);
+                    }
+                }
+            }
+            var alertMessage = "Номера пустующих депозитных ячеек:\n";
+            emptyCellIndexes.forEach(function (indexes) {
+                var rowIndex = indexes[0] + 1; 
+                var cellIndex = indexes[1] + 1;
+                alertMessage += "Строка: " + rowIndex + ", Ячейка: " + cellIndex + "\n";
+            });
+            alert(alertMessage);
+        });
+    </script>
+</body>
+
+</html>

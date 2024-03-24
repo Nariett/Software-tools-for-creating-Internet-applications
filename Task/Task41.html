@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 41</title>
+</head>
+<body>
+    <script>
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 21) - 10;
+        }
+        var arr = [];
+        for (var i = 0; i < 10; i++) {
+            arr.push(getRandomNumber());
+        }
+        var number = 5;
+        var count = 0;
+        for(var x in arr) {
+            if(arr[x] == number) {
+                count++;
+            }
+        }
+        var resultStyle;
+        if (count > 2) {
+            resultStyle = "color: red; border: 2px dashed blue;";
+        } else {
+            resultStyle = "background-color: lightblue; color: yellow;";
+        }
+        var resultString = "Sequence: " + arr.join(", ") + "\nNumber n: " + number + "\nCount: " + count;
+        alert(resultString);
+        console.log(resultString); 
+        var resultDiv = document.createElement("div");
+        resultDiv.style.cssText = resultStyle;
+        resultDiv.innerText = resultString;
+        document.body.appendChild(resultDiv);
+    </script>
+</body>
+</html>

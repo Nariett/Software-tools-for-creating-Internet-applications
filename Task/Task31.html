@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 31</title>
+</head>
+<body>
+    <input type="text" id="arrText" placeholder="Введите массив значений">
+    <input type="button" value ="Начать "onclick="addArray()">
+    <script>
+        function addArray()
+        {
+            var arr = (document.getElementById('arrText').value).split(' ');
+            var arrNew = []
+            for (var i in arr) {
+                if (parseInt(arr[i]) < 0) {
+                    arrNew.push(Math.abs(parseInt(arr[i])));
+                } else {
+                    arrNew.push(parseInt(arr[i]));
+                }
+            }
+            console.log(arrNew)
+        }
+    </script>
+</body>
+</html>

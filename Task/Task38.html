@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 38</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        function getNumbersWithDigit5() {
+            var result = [];
+            for (var i = 10; i < 100; i++) {
+                if (i.toString().includes('5')) {
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+        var numbers = getNumbersWithDigit5();
+        var resultDiv = document.getElementById('result'); 
+        resultDiv.textContent = "Двузначные числа с цифрой 5: " + numbers; 
+    </script>
+</body>
+</html>
